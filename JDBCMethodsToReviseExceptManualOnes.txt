@@ -1,0 +1,12 @@
+
+ 1> inst.addBatch(query);
+
+ 2> int arr[] = inst.executeBatch();
+
+ 3> conn.setAutoCommit(false);
+
+ 4> conn.commit();
+
+ 5> conn.rollback();
+
+
