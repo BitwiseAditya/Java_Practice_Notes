@@ -1,0 +1,4 @@
+Hibernate :-
+Object Relational Mapping.
+Dependencies Tag (groupId, artifactId, version subtags).
+

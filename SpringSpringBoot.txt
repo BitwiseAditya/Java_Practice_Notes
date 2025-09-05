@@ -1,0 +1,27 @@
+Spring and Spring Boot :-
+1> Inversion of Control
+2> Dependency Injection
+3> ApplicationContext
+4> @Component
+5> @Autowired
+6> IoC Container
+7> Beans (Objects managed by the Spring Framework) / BeanFactory
+8> ClassPathXMLApplicationContext
+9> .xml file ka bean / beans tag (id,class attributes)
+10> Scopes of a bean : Singleton , Prototype 
+11> Setter injection using the property tag inside bean tag of a particular class( name , value attributes)
+12> ref attribute of setter injection property tag ( to set a field having type class for which
+    bean is already created )
+
+
+
+
+
+
+
+
+
+
+
+
+
