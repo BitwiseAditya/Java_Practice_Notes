@@ -12,6 +12,12 @@ Spring and Spring Boot :-
 11> Setter injection using the property tag inside bean tag of a particular class( name , value attributes)
 12> ref attribute of setter injection property tag ( to set a field having type class for which
     bean is already created )
+13> Constructor Injection using contructor-arg tag (index,name,value attributes)
+14> autowire = "byType", autowire = "byName"
+15> lazy initialization of A Bean (lazy-init = "true")
+16> Inner Bean
+
+
 
 
 
