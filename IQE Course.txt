@@ -1,0 +1,2 @@
+.) Generics are used to create interfaces, classes and methods that specify the Object Type they work on as a 
+   parameter . Compile time checking is done and Casting is eleminated.
