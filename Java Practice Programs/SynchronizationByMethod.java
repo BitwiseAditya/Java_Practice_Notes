@@ -1,6 +1,8 @@
 //import java.util.*;
 class ToBeCalled {
     public synchronized void call(String msg) {
+        // only one thread will be able to access this method at a time. While one
+        // thread is inside the method, others will wait.
         System.out.print("[ ");
         System.out.print(msg);
         try {

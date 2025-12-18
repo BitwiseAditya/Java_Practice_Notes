@@ -26,7 +26,8 @@ class Caller implements Runnable {
     }
 
     public void run() {
-        synchronized (obj) {
+        synchronized (obj) { // For block code, the object to be synchronized needs to be passed as a
+                             // parameter.
             obj.call(s);
         }
     }
