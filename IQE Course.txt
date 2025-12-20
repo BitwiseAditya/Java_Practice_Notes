@@ -1,2 +1,23 @@
 .) Generics are used to create interfaces, classes and methods that specify the Object Type they work on as a 
    parameter . Compile time checking is done and Casting is eleminated.
+.) An annotation is metadata that gives details about the program and does not form part of the program.
+Annotations have advantages as:
+
+Input for the compiler -The compiler can use annotations to detect errors or to suppress warnings.
+
+Deployment-time and Compile-time processing - Software tools can use annotation data for code generation, XML files, etc. 
+
+Run-time processing - These annotations are available to be checked at run-time
+
+For classes, variables, methods, parameters, and packages annotations can be used.
+
+Annotations are written starting with a' @' symbol, followed by the name of the annotation and its elements, if any.
+They can be of the following types:
+
+Marker (without any element)
+
+Single-valued (with a single element)
+
+Multivalued (with multiple elements)
+
+The @Deprecated annotation is a marker annotation and can be used to mark a class, a method or a field as deprecated. It means that it's no longer used.
