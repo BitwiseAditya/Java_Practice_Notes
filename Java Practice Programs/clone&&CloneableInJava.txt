@@ -1,0 +1,95 @@
+In Java, .clone() is a method used to create a copy of an object. It’s part of the Object class, but it doesn’t just work automatically—you have to set things up properly.
+
+🔹 Basic idea
+
+.clone() creates a shallow copy of an object.
+Object clone() throws CloneNotSupportedException{}
+
+example:-
+
+class Student implements Cloneable {
+    int id;
+    String name;
+
+    Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Student s1 = new Student(1, "John");
+        Student s2 = (Student) s1.clone();
+
+        System.out.println(s1.name); // John
+        System.out.println(s2.name); // John
+    }
+}
+
+🔹 Important Rules
+1. Must implement Cloneable
+2. Override clone() method
+Usually you call super.clone() inside it.
+3. It performs shallow copy
+Copies primitive values ✔️
+Copies references (not actual objects) ❌
+
+example:-
+
+class Address {
+    String city;
+}
+
+class Person implements Cloneable {
+    Address address;
+
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}
+
+Both original and cloned object will share the same Address object.
+
+.
+
+🔹 Deep Copy (manual)
+
+To fully copy objects inside:
+
+public Object clone() throws CloneNotSupportedException {
+    Person p = (Person) super.clone();
+    p.address = new Address();
+    p.address.city = this.address.city;
+    return p;
+}
+
+🔹 Key Points
+.clone() is protected in Object, so you must override it.
+.It’s considered somewhat outdated / tricky.
+.Many developers prefer:
+  -Copy constructors
+  -Factory methods
+  -Serialization-based copying
+
+🔹 Modern Alternative :-
+Person p2 = new Person(p1); // copy constructor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
