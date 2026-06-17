@@ -13,6 +13,8 @@ public class StringExample {
             System.out.println("Nope");
         if (s.compareToIgnoreCase(s1) > 0)
             System.out.println("Yupp");
+        if (s.indexOf("cpp") == -1)
+            System.out.println("string cpp does not exist as a substring in String s");
         int index = s.indexOf(s1);
         System.out.println(s1 + " occurs in " + s + " for the first time at index " + index);
         index = s.lastIndexOf(s1);
