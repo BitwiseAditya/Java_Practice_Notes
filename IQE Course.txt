@@ -21,3 +21,21 @@ Single-valued (with a single element)
 Multivalued (with multiple elements)
 
 The @Deprecated annotation is a marker annotation and can be used to mark a class, a method or a field as deprecated. It means that it's no longer used.
+
+One very important point about chars in Java not covered in the String code file :-
+In Java, any arithmetic involving byte, short, or char is automatically promoted to int !
+For example,
+char c = 'A';
+System.out.println(c+1); // output is 66 , not 'B'
+Another point is that Java makes an exception for compile-time constants. So,
+char c = 65; //OK
+byte b = 100 //OK
+but...
+int x = 65;
+char c = x; // Error !!
+Even though x happens to be 65, its an variable, so the compiler can't apply the special rule for constant expressions !!
+Java was designed to avoid accidental data loss from narrowing conversions.So, it does not allow an implicit narrowing conversion from int to char for the result of an arithmetic expression. Hence, Explicit type casting is needed to convert an int result of an arithmetic expression int its ASCII / UNICODE corresponding character.  
+Hence,
+char c = 'a' + 4; // Error !!
+char c = (char)('a' + 4);  //  e , as wanted.
+Ye hai baat !
