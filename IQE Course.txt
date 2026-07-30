@@ -39,3 +39,25 @@ Hence,
 char c = 'a' + 4; // Error !!
 char c = (char)('a' + 4);  //  e , as wanted.
 Ye hai baat !
+
+Another extremely important thing about Strings in Java:-
+let String s be a String of length n. Now , consider the code below:
+String temp = "";
+for(int i=0; i<n; i++){
+   temp += s.charAt(i);
+}
+return temp;
+The time complexity of above code is O(n^2) ! Yes, its O(n^2) !!!
+To achieve what you are trying to do above, or in general whenever you have to create a new string-like that you will make a lot of changes to like appending 
+and deleting characters, use StringBuilder , for which .append() works in O(1).
+So, rewriting the above code to achieve what we actually wanted to do:
+StringBuilder temp = new StringBuilder("");
+for(int i=0; i<n; i++){
+  temp.append(s.charAt(i)) ;
+}
+return temp.toString() ;
+Now, its the expected O(n) time complexity.
+Ye hai duusri basic but important baat !!
+
+Lets gooo !
+
